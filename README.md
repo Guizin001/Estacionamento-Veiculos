@@ -1,6 +1,6 @@
 ## Olá, meu nome é Guilherme Taicico!
 
-TESTE A APLCAÇÃO: https://estacionamentoteste.netlify.app/
+TESTE A APLICAÇÃO: https://estacionamentoteste.netlify.app/
 
 - 🎓 Estudando Análise e Desenvolvimento de Sistemas na Unicsul.
 - 🌱 Aprendendo mais sobre ![image](https://img.shields.io/badge/Ruby-333333?style=flat&logo=ruby&logoColor=CC342D).
