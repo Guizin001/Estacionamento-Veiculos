@@ -1,0 +1,226 @@
+.planos {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px 16px;
+    border-radius: 20px;
+    width: fit-content;
+    margin-top: auto;
+    color: #fff;
+    background: #35424a;
+    transition: background 0.3s;
+}
+
+.planos:hover {
+    background: #262c30;
+}
+
+.remove-button {
+    background: #35424a;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s ease-in-out;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+}
+
+.remove-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: width 0.4s ease-out, height 0.4s ease-out, top 0.4s ease-out, left 0.4s ease-out;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.remove-button:hover {
+    background: #262c30;
+    transform: scale(1.05);
+}
+
+.remove-button:hover::before {
+    width: 0;
+    height: 0;
+}
+
+.remove-button-top {
+    background: transparent;
+    border: none;
+    color: #ef692b;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    transition: color 0.3s, transform 0.2s ease-in-out;
+}
+
+.remove-button-top:hover {
+    color: #262c30;
+    transform: rotate(90deg);
+}
+
+.timer {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #444;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+}
+
+.card {
+    background: linear-gradient(135deg, #ffffff, #f3f3f3);
+    border-radius: 10px;
+    padding: 35px;
+    text-align: justify;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    max-width: 200px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px #262c30;
+}
+
+.card button {
+    background: transparent;
+    border: none;
+    color: #ef692b;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    transition: color 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.card button:hover {
+    color: #262c30;
+    background: transparent;
+    transform: rotate(90deg) scale(1.1);
+}
+
+.card .payment-button {
+    color: white;
+    background-color: #2828285e;
+    border: 2px solid #ef692b;
+    margin-right: 20%;
+    font-size: 15px;
+    margin-top: 83%;
+}
+
+.card .payment-button:hover {
+    color: white;
+    background: #262c30;
+    transform: none;
+}
+
+.content {
+    margin-top: 6%;
+    overflow-y: auto;
+    height: calc(100vh - 200px);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+@media (max-width: 1400px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card .payment-button {
+        font-size: 10px;
+        margin-top: 105%;
+        right: -3px;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .content {
+        height: 550px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card .payment-button {
+        font-size: 10px;
+        margin-top: 105%;
+        right: -3px;
+    }
+
+    .card {
+        max-width: 90%;
+    }
+
+    .content {
+        height: 550px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .remove-button {
+        padding: 8px 12px;
+    }
+
+    .card {
+        padding: 20px;
+        font-size: 12px;
+    }
+
+    .card button {
+        font-size: 20px;
+        top: -5px;
+        right: -5px;
+    }
+
+    .card .payment-button {
+        font-size: 9px;
+        margin-top: 110%;
+    }
+
+    .timer {
+        font-size: 10px;
+    }
+
+}
